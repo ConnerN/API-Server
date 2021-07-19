@@ -1,0 +1,6 @@
+export MONGO_HOST=localhost
+export MONGO_DATABASE=heroes
+export MONGO_ROOT_USER=root
+export MONGO_ROOT_PASSWORD=hunter2
+export MONGO_USER=heroes
+export MONGO_PASSWORD=hunter2

@@ -1,0 +1,783 @@
+{
+	"info": {
+		"_postman_id": "271dbf37-4556-4043-89f6-4dc34810df2c",
+		"name": "Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Heroes",
+			"item": [
+				{
+					"name": "Get all heroes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/heroes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"heroes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get hero detail by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGJmYWU0OGU5YjFiZjM5YjhjNDZjYTQiLCJpYXQiOjE2MjMxNzU3MDYsImV4cCI6MTYyMzI2MjEwNn0.4lUEp9BYsQK9VgsqNJGFhKJlceaCCEVnZ6ONqwGWmKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/heroes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"heroes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bec94bee9bd2f8cde124fd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert new hero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"New\",\r\n    \"role\": \"TANK\",\r\n    \"description\": \"New description.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/heroes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"heroes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update hero by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Update\",\r\n    \"role\": \"TANK\",\r\n    \"description\": \"Update description.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/heroes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"heroes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bed930570da443a4d012cb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete hero by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/heroes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"heroes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bed800cb5751453c829a21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skills",
+			"item": [
+				{
+					"name": "Get all skills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/skills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get skill by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/skills/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"skills",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bef7f47816df504044bffb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inset new skills",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"heroid\": \"new id\",\r\n    \"skill1\": \"new skill\",\r\n    \"skill2\": \"new skill\",\r\n    \"skill3\": \"new skill\",\r\n    \"skill4\": \"new skill\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/skills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete skill by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/skills/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"skills",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bef7f47816df504044bffb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update skill by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"heroid\": \"update id\",\r\n    \"skill1\": \"update skill\",\r\n    \"skill2\": \"update skill\",\r\n    \"skill3\": \"update skill\",\r\n    \"skill4\": \"update skill\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/skills/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"skills",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bef7f47816df504044bffb"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGJmYWU0OGU5YjFiZjM5YjhjNDZjYTQiLCJpYXQiOjE2MjMxNzU3MDYsImV4cCI6MTYyMzI2MjEwNn0.4lUEp9BYsQK9VgsqNJGFhKJlceaCCEVnZ6ONqwGWmKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bfae48e9b1bf39b8c46ca4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"NewGuy\",\r\n    \"password\": \"hunter2\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"update  user\",\r\n    \"password\": \"update\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bef83e3cea3746c4da596a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bfaf0b7790920decc28f3b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Get all reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get review by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/reviews/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60befc5ec656b355948748e8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGJmYWU0OGU5YjFiZjM5YjhjNDZjYTQiLCJpYXQiOjE2MjMxNzU3MDYsImV4cCI6MTYyMzI2MjEwNn0.4lUEp9BYsQK9VgsqNJGFhKJlceaCCEVnZ6ONqwGWmKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"new\",\r\n    \"heroid\": \"new\",\r\n    \"stars\": 0.0,\r\n    \"commit\": \"new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update review by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGJmYWU0OGU5YjFiZjM5YjhjNDZjYTQiLCJpYXQiOjE2MjMxNzU3MDYsImV4cCI6MTYyMzI2MjEwNn0.4lUEp9BYsQK9VgsqNJGFhKJlceaCCEVnZ6ONqwGWmKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"update\",\r\n    \"heroid\": \"update\",\r\n    \"stars\": 0.0,\r\n    \"commit\": \"update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/reviews/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60befc5ec656b355948748e8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete review by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/reviews/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60befc5ec656b355948748e8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Get all images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get image by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/images/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bf9beab33b292e00fbf2d9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGJmYWU0OGU5YjFiZjM5YjhjNDZjYTQiLCJpYXQiOjE2MjMxNzU3MDYsImV4cCI6MTYyMzI2MjEwNn0.4lUEp9BYsQK9VgsqNJGFhKJlceaCCEVnZ6ONqwGWmKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"caption\": \"New\",\r\n    \"userid\": \"New\",\r\n    \"heroid\": \"New\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete image by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/images/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bf9beab33b292e00fbf2d9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update image by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"caption\": \"Update\",\r\n    \"userid\": \"Update\",\r\n    \"heroid\": \"Update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/images/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"images",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60bf9beab33b292e00fbf2d9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"id\": \"60bfae48e9b1bf39b8c46ca4\",\r\n    \"name\": \"NewGuy\",\r\n    \"password\": \"hunter2\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
